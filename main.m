@@ -25,6 +25,17 @@ int main(int argc, const char * argv[]) {
         
         NSLog(@"The highest number in the other array is %@", biggestNumber);
         
+        /*--------------------------*/
+        
+        NSArray *unsortedArray = @[@3, @20, @8, @10];
+        
+        NSNumber *largestNumber = [unsortedArray objectAtIndex:0];
+        for (int i = 1; i < 4; i++) {
+            largestNumber = ([[unsortedArray objectAtIndex:i]integerValue] > [largestNumber integerValue] ? [unsortedArray objectAtIndex:i]:largestNumber);
+        }
+        
+        NSLog(@"The largest number is %@", largestNumber);
+        
     }
     return 0;
 }
